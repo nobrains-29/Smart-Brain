@@ -18,7 +18,7 @@ const Register = (props) => {
   };
 
   const onSubmitSignIn = () => {
-    fetch("http://localhost:3000/register", {
+    fetch("https://smart-face-brain-01.herokuapp.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
