@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
